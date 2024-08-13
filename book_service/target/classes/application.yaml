@@ -1,0 +1,32 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: book-service
+
+  # Configure Feign client
+  cloud:
+    feign:
+      client:
+        config:
+          default:
+            connectTimeout: 5000
+            readTimeout: 5000
+
+author:
+  service:
+    url: http://localhost:8081 # URL of the author service
+
+# Logging configuration
+logging:
+  level:
+    root: INFO
+    com.example: DEBUG # Adjust the package to your application's base package
+
+# Other Spring Boot settings (customize as needed)
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info
