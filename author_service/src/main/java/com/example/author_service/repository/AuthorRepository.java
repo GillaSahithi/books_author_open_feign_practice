@@ -2,7 +2,6 @@ package com.example.author_service.repository;
 
 import com.example.author_service.domain.Author;
 import com.example.author_service.exceptions.AuthorNotFoundException;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -10,7 +9,6 @@ import java.util.ArrayList;
 import java.util.Optional;
 
 @Repository
-@Slf4j
 public class AuthorRepository {
 
     private List<Author> authors = new ArrayList<>();
@@ -24,7 +22,6 @@ public class AuthorRepository {
     }
 
     public List<Author> findAll() {
-        log.debug("Getting all patients");
         return List.copyOf(authors);
     }
 

@@ -42,7 +42,6 @@ public class BookController {
         if (book == null) {
             throw new BookNotFoundException("Book not found with ID: " + id);
         }
-        // Convert the Book entity to a BookDTO
         return convertToDTO(book);
     }
 

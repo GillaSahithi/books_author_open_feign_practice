@@ -1,5 +1,8 @@
 package com.example.book_service.dto;
 
+import lombok.Data;
+
+@Data
 public class BookDTO {
     private Long id;
     private String title;
@@ -10,5 +13,4 @@ public class BookDTO {
         this.title = title;
         this.author = author;
     }
-    // Getters and setters
 }

@@ -1,7 +1,6 @@
 package com.example.book_service.repository;
 
 import com.example.book_service.domain.Book;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -9,7 +8,6 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-@Slf4j
 public class BookRepository {
 
     private List<Book> books = new ArrayList<>();
@@ -23,7 +21,6 @@ public class BookRepository {
     }
 
     public List<Book> findAll() {
-        log.debug("Getting all patients");
         return List.copyOf(books);
     }
 
